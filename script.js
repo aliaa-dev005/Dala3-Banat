@@ -70,10 +70,10 @@ document.addEventListener('click', (event) => {
   const button = event.target.closest('.order-btn');
   if (!button) return;
 
-  const perfumeName = button.getAttribute('data-perfume') || 'عطر';
+    const perfumeName = button.getAttribute('data-perfume') || 'عطر';
   const message = `أريد طلب ${perfumeName} من دُلع بنات، يرجى تزويدي بالتفاصيل.`;
   const whatsappNumber = phoneNumber.replace(/^0/, '+20');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-  window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  window.location.href = whatsappUrl;
 });

@@ -15,11 +15,11 @@ const perfumes = [
   { name: 'Montblanc Legend Black', description: 'عطر رجالي كلاسيكي يمزج اللافندر والبرغموت مع الأخشاب، ليمنحك رائحة نظيفة وأنيقة تناسب الاستخدام اليومي.', image: 'd13.jfif' },
   { name: 'Hug Scent Acacia', description: 'عطر زهري خشبي ناعم بلمسات عسلية دافئة، يمنحك رائحة هادئة وأنيقة مناسبة لجميع الأوقات.', image: 'd14.jfif' },
   { name: 'Bio Soft 56', description: 'بودي ميست للشعر والجسم برائحة حلوة ومنعشة، يمنح إحساسًا بالنظافة والانتعاش مع ثبات جيد للاستخدام اليومي.', image: 'd15.jfif' },
-  { name: 'عطر زهرة القمر', description: 'هدوء وأناقة في كل نبضة.', image: 'd16.jfif' },
-  { name: 'عطر سحر الكافيار', description: 'مزيج عميق وريفي من العود والقرنفل.', image: 'd17.jfif' },
-  { name: 'عطر أميرة العطور', description: 'رائحة استثنائية تجمع بين الحلاوة والرصانة.', image: 'd18.jfif' },
-  { name: 'عطر نسمة الصباح', description: 'رائحة خفيفة ومشرقة تعكس النشاط والنعومة.', image: 'd19.jfif' },
-  { name: 'عطر لؤلؤة الليل', description: 'لطيفة وانسيابية مع لمسة من العنبر.', image: 'd20.jfif' }
+  { name: 'Zara Wonder Rose', description: 'عطر نسائي ساحر يمزج بين انتعاش الكمثرى وحلاوة التوت الأحمر مع لمسة دافئة من الفانيليا، ليمنحكِ إطلالة يومية مفعمة بالأنوثة والحيوية.', image: 'd16.jfif' },
+  { name: 'Zara Femme', description: 'عطر شرقي دافئ يجمع بين حلاوة الفانيليا ونعومة الفاوانيا والمسك، ليمنحكِ رائحة حلوة ومريحة تفيض بالنظافة والانتعاش مع ثبات ممتاز يدوم طوال اليوم.', image: 'd17.jfif' },
+  { name: 'Zara Nuit', description: 'عطر شرقي دافئ وغامض يمزج بين جاذبية الفانيليا، نفحات اللوز، ولمسة ناعمة من الأخشاب والمسك، ليمنحكِ رائحة حلوة وفخمة تفيض بالأنوثة والانتعاش مع ثبات قوي يدوم طويلاً', image: 'd18.jfif' },
+  { name: 'Zara 03 Nuit (Dress Time)', description: 'عطر دافئ يمزج بين حلاوة الخوخ والفانيليا ونعومة السوسن، ليمنحكِ رائحة مريحة تفيض بالنظافة والانتعاش مع ثبات ممتاز للاستخدام اليومي', image: 'd19.jfif' },
+  { name: 'Montblanc Legend Blue', description: 'عطر رجالي أروماتك فاخر يمزج بين انتعاش النعناع واللافندر ودفقات خشب الأرز والصندل الدافئة، ليمنحك رائحة حيوية تفيض بالنظافة والانتعاش مع ثبات قوي ومثالي للاستخدام اليومي.', image: 'd20.jfif' }
 ]
 const productsGrid = document.getElementById('productsGrid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
@@ -32,7 +32,7 @@ if (productsGrid) {
     card.className = 'product-card';
     card.innerHTML = `
       <div class="image-box">
-        <img src="${perfume.image}" alt="${perfume.name}" class="product-image" />
+        <img src="./${perfume.image}" alt="${perfume.name}" class="product-image" loading="lazy" decoding="async" />
       </div>
       <h3>${perfume.name}</h3>
       <p>${perfume.description}</p>
@@ -50,7 +50,7 @@ if (loadMoreBtn) {
       card.className = 'product-card';
       card.innerHTML = `
         <div class="image-box">
-          <img src="${perfume.image}" alt="${perfume.name}" class="product-image" />
+          <img src="./${perfume.image}" alt="${perfume.name}" class="product-image" loading="lazy" decoding="async" />
         </div>
         <h3>${perfume.name}</h3>
         <p>${perfume.description}</p>

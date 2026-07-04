@@ -48,14 +48,15 @@ if (loadMoreBtn) {
     nextItems.forEach((perfume) => {
       const card = document.createElement('article');
       card.className = 'product-card';
-      card.innerHTML = `
-        <div class="image-box">
-          <img src="./${perfume.image}" alt="${perfume.name}" class="product-image" loading="lazy" decoding="async" />
-        </div>
-        <h3>${perfume.name}</h3>
-        <p>${perfume.description}</p>
-        <button class="order-btn" data-perfume="${perfume.name}">اطلب الآن عبر واتساب</button>
-      `;
+        card.innerHTML = `
+            <div class="image-box">
+                <img src="${perfume.image}" class="product-image" alt="${perfume.name}" loading="lazy">
+            </div>
+            <h3>${perfume.name}</h3>
+            <p>${perfume.description}</p>
+            <button class="order-btn" data-perfume="${perfume.name}">اطلب الآن عبر واتساب</button>
+        `;
+
       productsGrid.appendChild(card);
     });
 
